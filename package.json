@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "test"
+    "start": "nodemon --ignore node_modules server/index.js",
+    "test": "mocha --bail --reporter nyan test/ServerSpec.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,9 @@
   "homepage": "https://github.com/hibaAkroush/nodeAnglarjs#readme",
   "dependencies": {
     "angularjs": "0.0.1",
+    "chai-http": "^3.0.0",
     "express": "^4.16.2",
+    "nodemon": "^1.17.1",
     "request": "^2.83.0",
     "underscore": "^1.8.3"
   },
