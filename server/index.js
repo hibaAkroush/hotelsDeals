@@ -5,7 +5,9 @@ const request = require('request');
 var bodyParser = require('body-parser');
 var jsonminify = require("jsonminify");
 var rp = require('request-promise');
+var cors = require('cors')
 
+app.use(cors())
 
 // Parse JSON (uniform resource locators)
 app.use(bodyParser.json());
@@ -27,7 +29,8 @@ app.get('/hotels', function (req, res) {
 
 	rp(options)
  	.then(function (body) {
-        hotels = body.offers.Hotel
+        hotels = JSON.stringify(body.offers.Hotel)
+        console.log("is it json?", isJson(hotels))
         res.send(hotels)
     })
     .catch(function (err) {
@@ -36,3 +39,11 @@ app.get('/hotels', function (req, res) {
 
 });
 
+function isJson(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
