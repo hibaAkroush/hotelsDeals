@@ -16,10 +16,12 @@ function app() {
 				var hotelName = '<p id="hotelName">Hotel Name: ' + val.hotelInfo.hotelName + '</p>'
 				var hotelStarRating ='<p id="hotelStarRating">' + val.hotelInfo.hotelStarRating + '</p>'
 				var hotelStreetAddress = '<p id="hotelStreetAddress">Street: ' + val.hotelInfo.hotelStreetAddress + '</p>'
+				var smallLine1 = '<hr id="smallLine1">'
+				var smallLine2 = '<hr id="smallLine2">'
 				var averagePriceValue = '<p id="averagePriceValue">' + Math.ceil(val.hotelPricingInfo.averagePriceValue) + '</p>'
 				var crossOutPriceValue = '<p id="crossOutPriceValue" >' + Math.ceil(val.hotelPricingInfo.crossOutPriceValue) + '</p>'
 				var percentSavings = '<p id="percentSavings">Save ' + Math.ceil(val.hotelPricingInfo.percentSavings) + "%" + '</p>'
-				$("#hotel"+i).append(hotelImage, box, cityCountry, hotelName, hotelStreetAddress, averagePriceValue, crossOutPriceValue,percentSavings, starLogo, hotelStarRating)
+				$("#hotel"+i).append(hotelImage, box, cityCountry, hotelName,smallLine1, hotelStreetAddress, averagePriceValue, crossOutPriceValue,percentSavings, smallLine2, starLogo, hotelStarRating)
 			});
 	  },
 	  error: function(error) {

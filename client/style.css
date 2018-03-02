@@ -58,7 +58,7 @@ body > img{
 #percentSavings{
 	position: relative;
 	left: 80px;
-	bottom: 50px;	
+	bottom: 60px;	
 }
 
 #cityCountry{
@@ -74,10 +74,31 @@ p {
 #crossOutPriceValue{
 	text-decoration: line-through;
 	color: #B33A3A;
-	    font-weight: bold;
+	font-weight: bold;
+	position: relative;
+	bottom: 20px;
 }
 
 #averagePriceValue{
-color: #458B00;	
+	color: #458B00;	
     font-weight: bold;
+    position: relative;
+	bottom: 10px;
+}
+
+#smallLine1{
+max-width: 200px;
+position: relative;
+top: 25px;
+}
+
+#smallLine2{
+position: relative;
+max-width: 200px;
+bottom: 70px;
+}
+
+#hotelStreetAddress{
+	position: relative;
+	bottom: 30px;
 }
