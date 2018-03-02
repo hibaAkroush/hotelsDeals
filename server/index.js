@@ -13,8 +13,8 @@ app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
-
-app.listen(9000, function() {
+var port = process.env.PORT||9000;
+app.listen(port, function() {
   console.log('Application is listening on 9000');
 });
 

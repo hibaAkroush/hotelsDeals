@@ -1,6 +1,6 @@
 function app() {
 	$.ajax({
-	  url: "http://localhost:9000/hotels",
+	  url: "https://fierce-tundra-32336.herokuapp.com/hotels",
 	  cache: false,
 	  type: 'GET',
 	  success: function(result){
