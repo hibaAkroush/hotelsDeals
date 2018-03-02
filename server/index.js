@@ -4,6 +4,7 @@ module.exports = app
 const request = require('request');
 var bodyParser = require('body-parser');
 var jsonminify = require("jsonminify");
+var rp = require('request-promise');
 
 
 // Parse JSON (uniform resource locators)
@@ -16,13 +17,22 @@ app.listen(9000, function() {
 });
 
 
+var hotels;
+app.get('/hotels', function (req, res) {
 
-app.post('/hotels', function (req, res) {
-	console.log("post req")
-	request('https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel', function (error, response, body) {
-	  console.log('error:', error); // Print the error if one occurred
-	  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-	  console.log('body:', JSON.parse(jsonminify(body)).offers.Hotel); // Print the HTML for the Google homepage.
+	var options = {
+	    uri: 'https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel',
+		json: true 
+	};
+
+	rp(options)
+ 	.then(function (body) {
+        hotels = body.offers.Hotel
+        res.send(hotels)
+    })
+    .catch(function (err) {
+        console.log("An Error Occured: ",err);
 	});
 
 });
+
