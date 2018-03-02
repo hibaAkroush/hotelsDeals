@@ -10,17 +10,17 @@ function app() {
 	    console.log(JSON.parse(result))
 	    	_.each(hotels,function(val,i){
 				var box = '<div id = "box"></div>'
-				var hotelImage = '<img src= ' + '"' + val.hotelInfo.hotelImageUrl + '"' + '/>'
-				var city = '<p id = "city">'+ val.destination.city+'</p>'
-				var country = '<p id = "country">'+ val.destination.country +'</p>'
+				var hotelImage = '<img src= ' + '"' + val.hotelInfo.hotelImageUrl + '"' + 'id="hotelImage"/>'
+				var starLogo = '<img src= "star.png" id="starLogo"/>'
+				var cityCountry = '<p id = "country">'+ val.destination.country + "/ " + val.destination.city +'</p>'
 				var hotelName = '<p id="hotelName">' + val.hotelInfo.hotelName + '</p>'
 				var hotelStarRating ='<p id="hotelStarRating">' + val.hotelInfo.hotelStarRating + '</p>'
-				var hotelStreetAddress = '<p id="hotelStreetAddress">' + val.hotelInfo.hotelStreetAddress + '</p>'
-				var averagePriceValue = '<p id="averagePriceValue">' + val.hotelPricingInfo.averagePriceValue + '</p>'
-				var crossOutPriceValue = '<p id="crossOutPriceValue">' + val.hotelPricingInfo.crossOutPriceValue + '</p>'
-				var percentSavings = '<p id="percentSavings">' + val.hotelPricingInfo.percentSavings + '</p>'
-				var currency = '<p id="currency">' + val.hotelPricingInfo.currency + '</p>'
-				$("#hotel"+i).append(hotelImage, box, city, country, hotelName, hotelStarRating, hotelStreetAddress, averagePriceValue, crossOutPriceValue,  percentSavings, currency)
+				var hotelStreetAddress = '<p id="hotelStreetAddress">Street: ' + val.hotelInfo.hotelStreetAddress + '</p>'
+				var averagePriceValue = '<p id="averagePriceValue">' + Math.ceil(val.hotelPricingInfo.averagePriceValue) + '</p>'
+				var crossOutPriceValue = '<p id="crossOutPriceValue">' + Math.ceil(val.hotelPricingInfo.crossOutPriceValue) + '</p>'
+				var percentSavings = '<p id="percentSavings">Save ' + Math.ceil(val.hotelPricingInfo.percentSavings) + "%" + '</p>'
+				var currencyBeforeDiscount = '<p id="currency">' + val.hotelPricingInfo.currency + '</p>'
+				$("#hotel"+i).append(hotelImage, box, cityCountry, hotelName, hotelStarRating, hotelStreetAddress, averagePriceValue,currencyBeforeDiscount, crossOutPriceValue,percentSavings, starLogo)
 			});
 	  },
 	  error: function(error) {
