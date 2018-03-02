@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Expedia</title>	
+	<title>Expedia</title>
+	<link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>	
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<img id="logo" src="logo.png">
+	<img src="imgad.jpg">
+	<!-- <p>wa sket wadari dam3atii</p> -->
+	<div class="multiple-items">
+	    <div id="hotel0"></div>
+	    <div id="hotel1"></div>
+	    <div id="hotel2"></div>
+	    <div id="hotel3"></div>
+	    <div id="hotel4"></div>
+	</div>
 
-<script type="text/javascript" src="home.js"></script>
-<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
-<script type="text/javascript">
-$(function () {
-	app()
-});
-</script>
+	<script type="text/javascript" src="home.js"></script>
+	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="../slick/slick.min.js"></script>
+	<script type="text/javascript" src="../node_modules/underscore/underscore-min.js"></script>
+
+	<script type="text/javascript">
+	$(function () {
+		app()
+	});
+	</script>
+
 </body>
 </html>
