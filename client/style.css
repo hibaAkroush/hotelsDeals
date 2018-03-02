@@ -1,7 +1,7 @@
 body {
 	background-color: #EDEDED;
 	font-family: Helvetica Neue, Arial, Lucida Grande, sans-serif;
-	color: rgba(150, 149, 151, 1);
+	color: #090f0f;
 }
 body > img{
 	position: relative;
@@ -73,4 +73,11 @@ p {
 
 #crossOutPriceValue{
 	text-decoration: line-through;
+	color: #B33A3A;
+	    font-weight: bold;
+}
+
+#averagePriceValue{
+color: #458B00;	
+    font-weight: bold;
 }
