@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var jsonminify = require("jsonminify");
 var rp = require('request-promise');
 var cors = require('cors')
+var port = process.env.PORT||9000;
 
 app.use(cors())
 
@@ -14,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
 
-app.listen(9000, function() {
+app.listen(port, function() {
   console.log('Application is listening on 9000');
 });
 

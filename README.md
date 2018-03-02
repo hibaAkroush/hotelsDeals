@@ -2,7 +2,7 @@
 
 # Experience 
 ## in Node Js: beginner and i have used jqiery and slick im intermediate 
-## remark my level in these things is maerely subjective
+## remark: my level in these technologies is maerely subjective
 
 
 # why I chose this language?
