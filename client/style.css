@@ -1,15 +1,12 @@
 body {
 	background-color: #EDEDED;
+	font-family: Helvetica Neue, Arial, Lucida Grande, sans-serif;
 }
 body > img{
 	position: relative;
 	margin-top: 5px;
 	padding-top: 0px;
 	width: 100%;
-}
-
-body > p{
-	color: red;
 }
 
 #logo{
@@ -19,9 +16,20 @@ body > p{
 	left: 30px;
 	top: 10px;
 }
+#box{
+position: absolute;
+bottom: 555px;
+height: 65px;
+width: 145px;
+background-color: rgba(255, 255, 255, 1);
+border-radius: 2px;
+}
 
-body > div {
-	position: absolute;
-	bottom: 500px; 
-	left: 50px;
+#listHotels{
+position: relative;
+bottom: 530px;
+left: 72px;
+height: 115px;
+width: 890px;
+z-index: 1;
 }
