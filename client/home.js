@@ -1,5 +1,3 @@
-// var jsonminify = require("jsonminify");
-
 function app() {
 	$.ajax({
 	  url: "http://localhost:9000/hotels",
