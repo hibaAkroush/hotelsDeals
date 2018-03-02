@@ -12,15 +12,14 @@ function app() {
 				var box = '<div id = "box"></div>'
 				var hotelImage = '<img src= ' + '"' + val.hotelInfo.hotelImageUrl + '"' + 'id="hotelImage"/>'
 				var starLogo = '<img src= "star.png" id="starLogo"/>'
-				var cityCountry = '<p id = "country">'+ val.destination.country + "/ " + val.destination.city +'</p>'
-				var hotelName = '<p id="hotelName">' + val.hotelInfo.hotelName + '</p>'
+				var cityCountry = '<p id = "country">Country: '+ val.destination.country + " City: " + val.destination.city +'</p>'
+				var hotelName = '<p id="hotelName">Hotel Name: ' + val.hotelInfo.hotelName + '</p>'
 				var hotelStarRating ='<p id="hotelStarRating">' + val.hotelInfo.hotelStarRating + '</p>'
 				var hotelStreetAddress = '<p id="hotelStreetAddress">Street: ' + val.hotelInfo.hotelStreetAddress + '</p>'
 				var averagePriceValue = '<p id="averagePriceValue">' + Math.ceil(val.hotelPricingInfo.averagePriceValue) + '</p>'
 				var crossOutPriceValue = '<p id="crossOutPriceValue">' + Math.ceil(val.hotelPricingInfo.crossOutPriceValue) + '</p>'
 				var percentSavings = '<p id="percentSavings">Save ' + Math.ceil(val.hotelPricingInfo.percentSavings) + "%" + '</p>'
-				var currencyBeforeDiscount = '<p id="currency">' + val.hotelPricingInfo.currency + '</p>'
-				$("#hotel"+i).append(hotelImage, box, cityCountry, hotelName, hotelStarRating, hotelStreetAddress, averagePriceValue,currencyBeforeDiscount, crossOutPriceValue,percentSavings, starLogo)
+				$("#hotel"+i).append(hotelImage, box, cityCountry, hotelName, hotelStreetAddress, averagePriceValue, crossOutPriceValue,percentSavings, starLogo, hotelStarRating)
 			});
 	  },
 	  error: function(error) {
