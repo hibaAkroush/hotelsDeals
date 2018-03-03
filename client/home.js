@@ -2,7 +2,7 @@
 
 function app() {
 	$.ajax({
-	  url: "https://fierce-tundra-32336.herokuapp.com/hotels",
+	  url: "http://localhost:9000/hotels",
 	  cache: false,
 	  type: 'GET',
 	  success: function(result){
@@ -40,8 +40,3 @@ function app() {
 	   nextArrow: false
 	});
 }
-
-// for all 
-// offerDateRange.lengthOfStay
-// offerDateRange.travelEndDate
-// offerDateRange.travelStartDate
