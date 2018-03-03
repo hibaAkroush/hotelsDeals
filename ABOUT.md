@@ -1,12 +1,12 @@
 # nodeAnglarjs
 
 # Instructions
-##
-to run the test use: npm test
-to run the server use: npm start
+## npm install first
+## to run the test use: npm test
+## to run the server use: npm start
 
-# assumptions 
-##
+# assumptions  
+## written as comments in the files 
 
 
 # Issue Log
