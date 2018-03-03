@@ -21,7 +21,6 @@ app.listen(9000, function() {
 // this code sends a call to Expedia's API if it succeeds the data will be send to front end 
 var hotels;
 app.get('/hotels', function(req, res) {
-
     var options = {
         uri: 'https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel',
         json: true
@@ -30,7 +29,6 @@ app.get('/hotels', function(req, res) {
     rp(options)
         .then(function(body) {
             hotels = JSON.stringify(body.offers.Hotel)
-            console.log("is it json?", isJson(hotels))
             res.send(hotels)
         })
         .catch(function(err) {
@@ -38,6 +36,7 @@ app.get('/hotels', function(req, res) {
         });
 
 });
+
 // this function was written for debugging 
 function isJson(str) {
     try {
