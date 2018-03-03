@@ -18,7 +18,7 @@ app.listen(9000, function() {
   console.log('Application is listening on 9000');
 });
 
-
+// this code sends a call to Expedia's API if it succeeds the data will be send to front end 
 var hotels;
 app.get('/hotels', function (req, res) {
 
@@ -38,7 +38,7 @@ app.get('/hotels', function (req, res) {
     });
 
 });
-
+// this function was written for debugging 
 function isJson(str) {
     try {
         JSON.parse(str);

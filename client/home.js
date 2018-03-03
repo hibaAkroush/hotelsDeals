@@ -1,5 +1,5 @@
-// var jsonminify = require("jsonminify");
-
+// assumption: this function sends an ajax request to the server and in case of success it appends 
+// the data to the DOM in case of error it alerts the error
 function app() {
 	$.ajax({
 	  url: "http://localhost:9000/hotels",
@@ -29,8 +29,7 @@ function app() {
 	  }
 	});
 
-
-
+    //  this part is for styling slick which is the draggable part of the website 
 	$('.multiple-items').slick({
 	  infinite: false,
 	  slidesToShow: 4,
