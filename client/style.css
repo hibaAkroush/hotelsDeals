@@ -3,7 +3,13 @@ body {
     font-family: Helvetica Neue, Arial, Lucida Grande, sans-serif;
     color: #090f0f;
 }
-
+#arrow{
+	position: absolute;
+	top: 250px;
+	left: 1100px;
+	height: 20px;
+	width: 30px;
+}
 body>img {
     position: relative;
     margin-top: 5px;
