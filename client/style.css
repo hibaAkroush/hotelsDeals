@@ -1,19 +1,39 @@
 body {
     background-color: #EDEDED;
     font-family: Helvetica Neue, Arial, Lucida Grande, sans-serif;
-    color: #090f0f;
+    font-size: 14px;
+    color: #fffff6;
 }
-#arrow{
-	position: absolute;
-	top: 250px;
-	left: 1100px;
-	height: 20px;
-	width: 30px;
+
+#arrow {
+    position: absolute;
+    top: 250px;
+    left: 1100px;
+    height: 20px;
+    width: 30px;
 }
-body>img {
+#navBar p{
+    position: relative;
+    color: #00355F;
+    float: left;
+    width: 30%
+    padding-left: 5px;
+    margin-right: 5%;
+    top: 45px;
+    left: 86px;
+}
+#navBar{
+    background-color: #FFCC00;
+    height: 250px;
+    min-width: 100%;
+    position: relative;
+    bottom:950px;
+    z-index: -1;
+}
+body > img {
     position: relative;
     margin-top: 5px;
-    padding-top: 0px;
+    padding-top: 10px;
     width: 100%;
 }
 
@@ -21,24 +41,28 @@ body>img {
     position: relative;
     height: 40px;
     width: 140px;
-    left: 30px;
-    top: 10px;
+    left: 85px;
+    bottom: 16px;
 }
 
-#hotelImage {
-    position: absolute;
-    border-radius: 8px;
-    height: 80px;
-    top: 235px;
-}
+
 
 #box {
     position: absolute;
     height: 320px;
     width: 265px;
     z-index: -1;
-    background-color: rgba(255, 255, 255, 1);
+    opacity: 0.8;
+    background-color: black;
     border-radius: 8px;
+}
+
+#hotelImage {
+    position: absolute;
+    border-radius: 8px;
+    height: 100px;
+    top: 200px;
+    padding-left: 10px;
 }
 
 #listHotels {
@@ -82,17 +106,19 @@ p {
 
 #crossOutPriceValue {
     text-decoration: line-through;
-    color: #B33A3A;
+    color: #f92222;
     font-weight: bold;
     position: relative;
     bottom: 20px;
+    font-size: 16px;
 }
 
 #averagePriceValue {
-    color: #458B00;
+    color: #72d611;
     font-weight: bold;
     position: relative;
     bottom: 10px;
+    font-size: 16px;
 }
 
 #smallLine1 {
@@ -104,7 +130,7 @@ p {
 #smallLine2 {
     position: relative;
     max-width: 200px;
-    bottom: 70px;
+    bottom: 60px;
 }
 
 #hotelStreetAddress {
