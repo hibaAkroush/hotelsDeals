@@ -1,3 +1,5 @@
+// var jsonminify = require("jsonminify");
+
 function app() {
 	$.ajax({
 	  url: "https://fierce-tundra-32336.herokuapp.com/hotels",
