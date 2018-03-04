@@ -1,18 +1,16 @@
 const express = require('express')
-const app = express()
-module.exports = app
+const app = express();
+module.exports = app;
 const request = require('request');
 var bodyParser = require('body-parser');
 var jsonminify = require("jsonminify");
 var rp = require('request-promise');
-var cors = require('cors')
-
-app.use(cors())
+var cors = require('cors');
 
 // Parse JSON (uniform resource locators)
+app.use(cors());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }))
-
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(9000, function() {
     console.log('Application is listening on 9000');
@@ -28,13 +26,12 @@ app.get('/hotels', function(req, res) {
 
     rp(options)
         .then(function(body) {
-            hotels = JSON.stringify(body.offers.Hotel)
-            res.send(hotels)
+            hotels = JSON.stringify(body.offers.Hotel);
+            res.send(hotels);
         })
         .catch(function(err) {
             console.log("An Error Occured: ", err);
         });
-
 });
 
 // this function was written for debugging 

@@ -8,6 +8,7 @@ var assert = require('chai').assert
 
 
 chai.use(chaiHttp);
+
 describe('/GET hotels', () => {
     it('should take less than 500ms', function(done) {
         this.timeout(500);
@@ -25,7 +26,7 @@ describe('/GET hotels', () => {
         chai.request(server)
             .get('/hotels')
             .end((err, res) => {
-                expect(res).to.have.property('text')
+                expect(res).to.have.property('text');
                 done();
             });
     });
