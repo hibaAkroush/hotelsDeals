@@ -3,6 +3,7 @@ body {
     font-family: Helvetica Neue, Arial, Lucida Grande, sans-serif;
     font-size: 14px;
     color: #fffff6;
+    background-color: #FFCC00;
 }
 
 #arrow {
@@ -23,7 +24,7 @@ body {
     left: 86px;
 }
 #navBar{
-    background-color: #FFCC00;
+
     height: 250px;
     min-width: 100%;
     position: relative;
