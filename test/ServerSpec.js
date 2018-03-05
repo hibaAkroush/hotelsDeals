@@ -9,14 +9,14 @@ var assert = require('chai').assert
 
 chai.use(chaiHttp);
 
-describe('/GET hotels', () => {
+describe('/GET /', () => {
     it('should take less than 500ms', function(done) {
         this.timeout(500);
         setTimeout(done, 300);
     });
     it('it should have status 200', (done) => {
         chai.request(server)
-            .get('/hotels')
+            .get('/')
             .end((err, res) => {
                 expect(res).to.have.status(200);
                 done();
@@ -24,7 +24,7 @@ describe('/GET hotels', () => {
     });
     it('it should have property text', (done) => {
         chai.request(server)
-            .get('/hotels')
+            .get('/')
             .end((err, res) => {
                 expect(res).to.have.property('text');
                 done();
@@ -32,17 +32,9 @@ describe('/GET hotels', () => {
     });
     it('it should not respond with error', (done) => {
         chai.request(server)
-            .get('/hotels')
+            .get('/')
             .end((err, res) => {
                 expect(err).to.not.exist;
-                done();
-            });
-    });
-    it('it should have 5 hotels', (done) => {
-        chai.request(server)
-            .get('/hotels')
-            .end((err, res) => {
-                expect(JSON.parse(res.text)).to.have.lengthOf(5);
                 done();
             });
     });
