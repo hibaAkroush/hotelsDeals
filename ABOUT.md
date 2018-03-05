@@ -1,20 +1,20 @@
 # nodeAnglarjs
 
 # Instructions
-## npm install first
-## to run the test use: npm test
-## to run the server use: npm start
+- npm install first
+- to run the test use: npm test
+- to run the server use: npm start
 
 # assumptions  
-## written as comments in the files 
+- written as comments in the files 
 
 
 # Issue Log
-## TypeError: app.address is not a function
-## solution: export the server from server.js 
+- TypeError: app.address is not a function
+- solution: export the server from server.js 
 
 ## spaces in json 
-## use jsonminify 
+- use jsonminify 
 
 # heroku general guide for future refrence 
 1- change the port to: process.env.PORT
