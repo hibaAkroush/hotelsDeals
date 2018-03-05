@@ -4,6 +4,7 @@
 - npm install first
 - to run the test use: npm test
 - to run the server use: npm start
+- go to http://localhost:9000/ 
 
 # assumptions  
 - written as comments in the files 
