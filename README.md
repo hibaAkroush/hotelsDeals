@@ -7,7 +7,7 @@
 
 ## why I chose this language?
 - node is fast and it has a lot of helper middlewares 
-- non-blocking calls
+- non-blocking calls: in this case the user does not have to wait for the website to fetch data from the API, this waiting time is used to serve other requests.
 - npm is huge and resourceful 
 
 
