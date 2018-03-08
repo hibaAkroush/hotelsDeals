@@ -1,5 +1,5 @@
-#nodeAnglarjs
-##Instructions
+# nodeAnglarjs
+## Instructions
 •	From the root directory run: npm install
 •	to run the test: npm test
 •	to run the server: npm start
