@@ -2,7 +2,7 @@ var expect = require('chai').expect;
 var request = require('request');
 let chai = require('chai');
 let chaiHttp = require('chai-http');
-let server = require('../index');
+let server = require('../server/index');
 let should = chai.should();
 var assert = require('chai').assert
 
@@ -11,10 +11,6 @@ chai.use(chaiHttp);
 
 describe('/GET /', () => {
     // tests for main page 
-    it('should take less than 500ms', function(done) {
-        this.timeout(500);
-        setTimeout(done, 300);
-    });
     it('it should have status 200', (done) => {
         chai.request(server)
             .get('/')
