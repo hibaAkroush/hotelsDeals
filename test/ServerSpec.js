@@ -59,7 +59,6 @@ describe('/GET /', () => {
         chai.request(server)
             .get('/data/hotels')
             .end((err, res) => {
-                console.log(JSON.parse(res.text)[0].hotelInfo.hotelName);
                 done();
             });
     });  
@@ -67,7 +66,6 @@ describe('/GET /', () => {
         chai.request(server)
             .get('/data/hotels')
             .end((err, res) => {
-                console.log(JSON.parse(res.text)[0].hotelInfo.hotelCity);
                 done();
             });
     });
@@ -75,7 +73,6 @@ describe('/GET /', () => {
         chai.request(server)
             .get('/data/hotels')
             .end((err, res) => {
-                console.log(JSON.parse(res.text)[0].hotelInfo.hotelStarRating);
                 done();
             });
     });  
@@ -83,7 +80,6 @@ describe('/GET /', () => {
         chai.request(server)
             .get('/data/hotels')
             .end((err, res) => {
-                console.log(JSON.parse(res.text)[0].hotelInfo.hotelGuestReviewRating);
                 done();
             });
     });  
@@ -91,7 +87,6 @@ describe('/GET /', () => {
         chai.request(server)
             .get('/data/hotels')
             .end((err, res) => {
-                console.log(JSON.parse(res.text)[0].hotelInfo.hotelReviewTotal);
                 done();
             });
     });
@@ -99,7 +94,6 @@ describe('/GET /', () => {
         chai.request(server)
             .get('/data/hotels')
             .end((err, res) => {
-                console.log(JSON.parse(res.text)[0].hotelInfo.hotelImageUrl);
                 done();
             });
     });             
